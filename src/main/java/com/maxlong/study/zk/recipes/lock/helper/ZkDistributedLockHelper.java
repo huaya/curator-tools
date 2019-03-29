@@ -28,6 +28,10 @@ public class ZkDistributedLockHelper {
         return CuratorFrameworkFactory.createCuratorFrameworkManager();
     }
 
+    private static CuratorFrameworkManager getCuratorFrameworkManager(String connectionString, String namespace) {
+        return CuratorFrameworkFactory.createCuratorFrameworkManager(connectionString, namespace);
+    }
+
     public static ZkPessimisticLock getZkPessimisticLock(String module, String childPath, ZkDistributedLockType zkDistributedLockType) {
         ZkPessimisticLock zkPessimisticLock;
         CuratorFrameworkManager curatorFrameworkManager = getCuratorFrameworkManager();

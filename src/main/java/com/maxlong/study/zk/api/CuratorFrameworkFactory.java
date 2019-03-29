@@ -38,12 +38,25 @@ public class CuratorFrameworkFactory {
      * @return
      */
     public static final com.maxlong.study.zk.api.CuratorFrameworkManager createCuratorFrameworkManager(){
-        String connectionString  = DynamicPropertyHelper.getStringProperty("technology.zookeeper.connectstring", "192.168.128.128:2181");
-        String namespace         = DynamicPropertyHelper.getStringProperty("technology.zookeeper.namespace", "maxlong");
-        int retryBaseSleepTimems = DynamicPropertyHelper.getIntProperty("technology.zookeeper.retry.basesleeptimems", 1000);
-        int maxretries           = DynamicPropertyHelper.getIntProperty("technology.zookeeper.retry.maxretries", 10);
-        int connectionTimeoutMs  = DynamicPropertyHelper.getIntProperty("technology.zookeeper.connectiontimeoutms", 15 * 1000);
-        int sessionTimeoutMs     = DynamicPropertyHelper.getIntProperty("technology.zookeeper.sessiontimeoutms", 60 * 1000);
+        String connectionString  = DynamicPropertyHelper.getStringProperty("zookeeper.connectstring", "192.168.128.128:2181");
+        String namespace         = DynamicPropertyHelper.getStringProperty("zookeeper.namespace", "maxlong");
+        int retryBaseSleepTimems = DynamicPropertyHelper.getIntProperty("zookeeper.retry.basesleeptimems", 1000);
+        int maxretries           = DynamicPropertyHelper.getIntProperty("zookeeper.retry.maxretries", 10);
+        int connectionTimeoutMs  = DynamicPropertyHelper.getIntProperty("zookeeper.connectiontimeoutms", 15 * 1000);
+        int sessionTimeoutMs     = DynamicPropertyHelper.getIntProperty("zookeeper.sessiontimeoutms", 60 * 1000);
+        return createCuratorFrameworkManager(connectionString,retryBaseSleepTimems,maxretries,namespace,connectionTimeoutMs,sessionTimeoutMs);
+    }
+
+    /**
+     * 创建 CuratorFrameworkManager
+     *
+     * @return
+     */
+    public static final CuratorFrameworkManager createCuratorFrameworkManager(String connectionString, String namespace){
+        int retryBaseSleepTimems = DynamicPropertyHelper.getIntProperty("zookeeper.retry.basesleeptimems", 1000);
+        int maxretries           = DynamicPropertyHelper.getIntProperty("zookeeper.retry.maxretries", 10);
+        int connectionTimeoutMs  = DynamicPropertyHelper.getIntProperty("zookeeper.connectiontimeoutms", 15 * 1000);
+        int sessionTimeoutMs     = DynamicPropertyHelper.getIntProperty("zookeeper.sessiontimeoutms", 60 * 1000);
         return createCuratorFrameworkManager(connectionString,retryBaseSleepTimems,maxretries,namespace,connectionTimeoutMs,sessionTimeoutMs);
     }
 
