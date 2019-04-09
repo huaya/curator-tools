@@ -18,28 +18,28 @@ public interface Candidater {
      *
      * @throws Exception
      */
-    public void requireElection() throws Exception ;
+    void requireElection() throws Exception ;
 
     /**
      * 判断是否是Leader
      *
      * @return
      */
-    public boolean isLeader();
+    boolean isLeader();
 
     /**
      * 获得Leader  Id
      *
      * @return
      */
-    public String getLeaderId() throws Exception;
+    String getLeaderId() throws Exception;
 
     /**
      * 获取节点
      *
      * @return
      */
-    public String getNodeId();
+    String getNodeId();
 
     /**
      * 等待选举结果(有结果立刻返回)
@@ -49,13 +49,13 @@ public interface Candidater {
      * @return  true 领导 false 非领导
      * @throws InterruptedException
      */
-    public boolean awaitElection(long timeout, TimeUnit unit) throws InterruptedException;
+    boolean awaitElection(long timeout, TimeUnit unit) throws InterruptedException;
 
     /**
      * 释放参选资格关闭自己
      *
      * @throws IOException
      */
-    public void close() throws IOException;
+    void close() throws IOException;
 
 }
