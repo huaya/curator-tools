@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 可重入锁
  *
- * @author Nano
+ * @author ma.xl
  * @version 1.0.0
  * @since 2015/6/1 11:18
  * abacus-parent

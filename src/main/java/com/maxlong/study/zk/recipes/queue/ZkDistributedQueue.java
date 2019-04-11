@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * zk 分布式队列
  *
- * @author Nano
+ * @author ma.xl
  * @version 1.0.0
  * @since 2015/6/19 14:54
  * abacus-parent

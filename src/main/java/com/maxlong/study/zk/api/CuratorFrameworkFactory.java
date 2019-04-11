@@ -7,7 +7,7 @@ import org.apache.curator.retry.ExponentialBackoffRetry;
 /**
  * CuratorFramework 创建工厂
  *
- * @author Nano
+ * @author ma.xl
  * @version 1.0.0
  * @since 2015/6/1 14:05
  * abacus-parent

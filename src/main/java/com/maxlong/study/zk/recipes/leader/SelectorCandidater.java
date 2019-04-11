@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 选择模式候选人
  *
- * @author Nano
+ * @author ma.xl
  * @version 1.0.0
  * @since 2015/6/17 18:22
  * abacus-parent

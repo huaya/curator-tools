@@ -17,7 +17,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * ZK分布式锁管理辅助类
  *
- * @author Nano
+ * @author ma.xl
  * @version 1.0.0
  * @since 2015/5/29 14:15
  * abacus-parent

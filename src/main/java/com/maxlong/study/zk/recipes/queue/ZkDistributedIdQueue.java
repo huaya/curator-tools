@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 指定ID的分布式队列
  *
- * @author Nano
+ * @author ma.xl
  * @version 1.0.0
  * @since 2015/6/19 15:37
  * abacus-parent

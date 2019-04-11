@@ -19,7 +19,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 延迟队列
  *
- * @author Nano
+ * @author ma.xl
  * @version 1.0.0
  * @since 2015/6/19 17:05
  * abacus-parent

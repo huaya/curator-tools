@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * 分布式悲观锁(读写分离)
  * <p/>
  * Created by IntelliJ IDEA.
- * User: Nano
+ * User: ma.xl
  * Date: 2015/11/29
  * Time: 14:13
  * To change this template use File | Settings | File and Code Templates.

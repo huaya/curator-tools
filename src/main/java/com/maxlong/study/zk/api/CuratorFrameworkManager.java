@@ -8,7 +8,7 @@ import org.apache.curator.utils.CloseableUtils;
  * CuratorFramework 管理器
  * <p/>
  * Created by IntelliJ IDEA.
- * User: Nano
+ * User: ma.xl
  * Date: 2015/11/28
  * Time: 17:42
  * To change this template use File | Settings | File and Code Templates.

@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
  * zk信号量
  *
  * Created by IntelliJ IDEA.
- * User: Nano
+ * User: ma.xl
  * Date: 2015/11/29
  * Time: 15:24
  * To change this template use File | Settings | File and Code Templates.

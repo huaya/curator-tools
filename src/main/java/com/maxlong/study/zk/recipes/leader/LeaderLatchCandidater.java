@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Latch模式候选人
  *
- * @author Nano
+ * @author ma.xl
  * @version 1.0.0
  * @since 2015/6/17 16:39
  * abacus-parent

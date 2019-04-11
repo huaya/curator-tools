@@ -7,7 +7,7 @@ import com.maxlong.study.zk.api.CuratorFrameworkManager;
  * Zk分布式悲观锁
  *
  * Created by IntelliJ IDEA.
- * User: Nano
+ * User: ma.xl
  * Date: 2015/11/29
  * Time: 14:36
  * To change this template use File | Settings | File and Code Templates.
