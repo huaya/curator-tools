@@ -2,6 +2,7 @@ package com.maxlong.study.zk.recipes.leader;
 
 import com.maxlong.study.zk.recipes.leader.api.Candidater;
 import org.apache.curator.framework.CuratorFramework;
+import org.apache.curator.framework.imps.CuratorFrameworkState;
 import org.apache.curator.framework.recipes.leader.LeaderLatch;
 import org.apache.curator.framework.state.ConnectionState;
 import org.apache.curator.framework.state.ConnectionStateListener;
@@ -39,13 +40,14 @@ public class LeaderLatchCandidater implements Candidater {
         this.nodeId      = nodeId;
         this.client      = client;
         this.client.getConnectionStateListenable().addListener(new LeaderLatchCandidaterConnectionStateListener(this));
-        this.client.start();
+        if(!client.getState().equals(CuratorFrameworkState.STARTED)){
+            this.client.start();
+        }
     }
 
     public static class LeaderLatchCandidaterConnectionStateListener implements ConnectionStateListener{
 
         private LeaderLatchCandidater candidater ;
-
         public LeaderLatchCandidaterConnectionStateListener(LeaderLatchCandidater candidater){
             this.candidater = candidater;
         }
@@ -66,7 +68,7 @@ public class LeaderLatchCandidater implements Candidater {
      * @throws Exception
      */
     public void requireElection() throws Exception {
-        if (this.leaderLatch != null)
+        if (this.leaderLatch != null && leaderLatch.getState() != LeaderLatch.State.STARTED)
             this.leaderLatch.start();
     }
 
